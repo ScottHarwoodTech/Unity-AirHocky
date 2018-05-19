@@ -18,4 +18,12 @@ public class PuckBrain : MonoBehaviour {
 	void Update () {
         PuckSpeed.text = "Puck Speed: \n " + rb.velocity.ToString();
     }
+    public void Reset()
+    {
+        Debug.Log("RESET");
+        rb.MovePosition(new Vector3(0, 2.5f, 0));
+        rb.velocity = Vector3.zero;
+        rb.AddForce(500f, 0, Random.Range(20, 40), ForceMode.Impulse);
+
+    }
 }
