@@ -17,19 +17,20 @@ public class ArmBrain : MonoBehaviour {
     Vector3 moveForce = new Vector3();
     Rigidbody rb;
     Rigidbody camBod;
+    Vector3 ofsetVec = new Vector3(15, 20, 0);
     bool running;
 
     private void Update()
     {
-        if (-82.5 < rb.position.z && rb.position.z < 82.5)
+        if (-81.25 < rb.position.z && rb.position.z < 81.25)
         {
             Move();
         }
-        else if (rb.position.z <= -82.5 && moveForce.z > 0)
+        else if (rb.position.z <= -81.25 && moveForce.z > 0)
         {
             Move();
         }
-        else if (rb.position.z >= 82.5 && moveForce.z < 0)
+        else if (rb.position.z >= 81.25 && moveForce.z < 0)
         {
             Move();
         }
@@ -41,7 +42,7 @@ public class ArmBrain : MonoBehaviour {
     private void Move()
     {
         rb.MovePosition(rb.position + moveForce);
-        camBod.MovePosition(rb.position);
+        camBod.MovePosition(rb.position + ofsetVec);
         moveForce = moveForce * 0;//reset vector after each move
                                   //check position isnt wall
     }

@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-E:/Documents/Unity-AirHocky/Air Hocky Table/Air Hocky Table.exe
+E:/Documents/Build-V0.8/Build-V0.8.exe
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
